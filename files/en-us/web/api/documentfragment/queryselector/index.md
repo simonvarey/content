@@ -52,7 +52,7 @@ const el = documentfragment.querySelector(".myclass");
 The string argument pass to `querySelector` must follow the CSS syntax. To
 match ID or selectors that do not follow the CSS syntax (by using semicolon or space
 inappropriately for example), it's mandatory to escape the wrong character with a
-double back slash:
+double backslash:
 
 ```html
 <div id="foo\bar"></div>
@@ -65,6 +65,9 @@ double back slash:
   document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
+
+> [!NOTE]
+> A double backslash is necessary here because backslashes themselves need to be escaped by a backslash in JavaScript string literals. This also means that a backslash in an ID or selector must be represented by four backslashes. See [String literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) for more details.
 
 ## Specifications
 
